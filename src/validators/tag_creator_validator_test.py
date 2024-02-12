@@ -14,5 +14,6 @@ def test_tag_creator_validator_with_error():
 
     try:
         tag_creator_validator(req)
+        assert False
     except Exception as exception:
         assert isinstance(exception, HttpUnprocessableEntutyError)
